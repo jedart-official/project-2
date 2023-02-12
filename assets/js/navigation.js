@@ -1,25 +1,36 @@
-function headerNav({ menuList, type = "computer" }) {
-    menuList = document.getElementById(menuList).children;
-    menuList = Array.from(menuList);
-    menuList.forEach((menuItem) => {
-        headerScroll({ item: menuItem, type: type });
-    });
-}
-
-function headerScroll({ item, type }) {
-    item.addEventListener("click", () => {
-        let scrollName = item.dataset.scroll;
-        let scrollObject = document.getElementById(scrollName);
-        scrollObject.scrollIntoView({ behavior: "smooth", block: "center" });
-        if (type == "mobile") {
-            console.log(type);
-            let mobileHeader = document.querySelector(".header__mobile");
-            mobileHeader.classList.remove("show");
-            let body = document.getElementsByTagName("body")[0];
-            body.classList.remove("lock");
+function headerNav({
+    menuId,
+    mobileMode = false,
+    bodyClass = "lock",
+    menuClass = "show",
+}) {
+    const menu = document.getElementById(menuId);
+    if (!menu) {
+        console.error(`Menu with id ${menuId} not found`);
+        return;
+    }
+    menu.addEventListener("click", (event) => {
+        const item = event.target.closest("li");
+        if (item) {
+            headerScroll({ item, mobileMode, bodyClass, menuClass });
         }
     });
 }
 
-headerNav({ menuList: "header__menu" });
-headerNav({ menuList: "header__menu__mobile", type: "mobile" });
+function headerScroll({ item, mobileMode, bodyClass, menuClass }) {
+    let scrollName = item.dataset.scroll;
+    let scrollObject = document.getElementById(scrollName);
+    scrollObject.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (mobileMode) {
+        let mobileHeader = document.querySelector(".header__mobile");
+        if (!mobileHeader) {
+            console.error("Header mobile is not defined");
+            return;
+        }
+        mobileHeader.classList.remove(menuClass);
+        document.body.classList.remove(bodyClass);
+    }
+}
+
+headerNav({ menuId: "header__menu" });
+headerNav({ menuId: "header__menu__mobile", mobileMode: true });

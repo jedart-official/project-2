@@ -1,9 +1,9 @@
 const previewAnimation = new AnimationMachine({
     triggerEl: ".artificial",
     editEl: ".artificial__content",
-    startTransofrm: "-1000px",
+    startTransform: "-1000px",
     endTransform: "0px",
-    type: "both",
+    useDOMHandler: true,
 }).start();
 
 const previewImgAnimation = new AnimationMachine({
@@ -11,13 +11,13 @@ const previewImgAnimation = new AnimationMachine({
     editEl: ".artificial__img",
     endOpacity: "1",
     startOpacity: "0",
-    type: "both",
+    useDOMHandler: true,
 }).start();
 
 const LerningAnimation = new AnimationMachine({
     triggerEl: ".learning",
     editEl: ".learning__content",
-    startTransofrm: "1000px",
+    startTransform: "1000px",
     endTransform: "0px",
     startOpacity: "0",
 }).start();
@@ -40,7 +40,7 @@ const slider = new AnimationMachine({
 const AboutwAnimation = new AnimationMachine({
     triggerEl: ".about",
     editEl: ".about__content",
-    startTransofrm: "-1000px",
+    startTransform: "-1000px",
     endTransform: "0px",
     startOpacity: "0",
 }).start();

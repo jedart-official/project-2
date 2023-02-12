@@ -35,9 +35,6 @@ h3 {
     padding: 0;
 }
 
-section {
-}
-
 .wrapper {
     max-width: 1150px;
     padding: 0 15px;
@@ -62,9 +59,12 @@ section {
 
 .title {
     font-weight: 800;
-    font-size: 55px;
+    font-size: $title-font-size-1440;
     line-height: 130%;
     color: #ffffff;
+    @media (max-width: $w480) {
+        font-size: $title-font-size-480;
+    }
 }
 
 .descr {

@@ -1,11 +1,23 @@
-function showMobileMenu({ trigger, menu }) {
-    trigger = document.querySelector(trigger);
-    menu = document.querySelector(menu);
-    trigger.addEventListener("click", () => {
-        menu.classList.toggle("show");
-        let body = document.getElementsByTagName("body")[0];
-        body.classList.toggle("lock");
-    });
+function showMobileMenu({
+    trigger,
+    menu,
+    bodyClass = "lock",
+    menuClass = "show",
+} = {}) {
+    const triggerEl = document.querySelector(trigger);
+    const menuEl = document.querySelector(menu);
+
+    if (!triggerEl || !menuEl) {
+        console.error("Error: trigger or menu element not found");
+        return;
+    }
+
+    function toggleMenu() {
+        menuEl.classList.toggle(menuClass);
+        document.body.classList.toggle(bodyClass);
+    }
+
+    triggerEl.addEventListener("click", toggleMenu);
 }
 
 showMobileMenu({ trigger: ".header__burger", menu: ".header__mobile" });

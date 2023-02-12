@@ -87,6 +87,11 @@
   font-size: 22.5455px;
   line-height: 31px;
 }
+@media (max-width: 480px) {
+  .header__logo p {
+    font-size: 18px;
+  }
+}
 .header__menu {
   display: flex;
   gap: 40px;
@@ -191,20 +196,31 @@
 }
 @media (max-width: 1100px) {
   .artificial__left {
-    max-width: 80%;
+    max-width: 100%;
     margin: 50px 0;
   }
 }
 .artificial__mark {
+  display: block;
   text-transform: uppercase;
   color: #3a68b8;
   margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .artificial__mark {
+    margin-bottom: 20px;
+  }
 }
 .artificial__title {
   margin-bottom: 40px;
 }
 .artificial__descr {
   margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .artificial__descr {
+    margin-bottom: 40px;
+  }
 }
 .artificial__button {
   padding: 15px 30px;
@@ -273,6 +289,11 @@
   .learning__left-1050 {
     display: block;
     max-width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  .learning__left-1050 {
+    max-width: 100%;
   }
 }
 .learning__left {
@@ -406,6 +427,11 @@
 }
 .about__right img {
   max-width: 500px;
+}
+@media (max-width: 480px) {
+  .about__right img {
+    max-width: 100%;
+  }
 }
 .about__descr__container {
   margin-top: 40px;
@@ -557,6 +583,11 @@ h3 {
   font-size: 55px;
   line-height: 130%;
   color: #ffffff;
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
 }
 
 .descr {

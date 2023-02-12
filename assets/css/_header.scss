@@ -83,6 +83,9 @@
         font-weight: 600;
         font-size: 22.5455px;
         line-height: 31px;
+        @media (max-width: $w480) {
+            font-size: 18px;
+        }
     }
     &__menu {
         display: flex;
