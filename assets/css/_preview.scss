@@ -1,0 +1,95 @@
+.artificial {
+    background-color: #0a121f;
+    padding-bottom: 100px;
+    .wrapper {
+        position: relative;
+    }
+    &__content {
+        position: relative;
+
+        transform: translateX(-1000px);
+    }
+    &__img {
+        position: absolute;
+        left: 750px;
+        max-width: 600px;
+        bottom: 20%;
+        opacity: 0;
+        @media (max-width: $w1600) {
+            left: 700px;
+            max-width: 550px;
+            bottom: 25%;
+        }
+        @media (max-width: $w1400) {
+            left: 650px;
+            max-width: 500px;
+            bottom: 30%;
+        }
+        @media (max-width: $w1200) {
+            left: 650px;
+            max-width: 450px;
+            bottom: 35%;
+        }
+        @media (max-width: $w1100) {
+            display: none;
+        }
+    }
+    &__top {
+        display: flex;
+        position: relative;
+        @media (max-width: $w1100) {
+            flex-direction: column;
+        }
+    }
+    &__left {
+        margin: 130px 0;
+        max-width: 600px;
+        @media (max-width: $w1100) {
+            max-width: 80%;
+            margin: 50px 0;
+        }
+    }
+    &__mark {
+        text-transform: uppercase;
+        color: #3a68b8;
+        margin-bottom: 10px;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__descr {
+        margin-bottom: 20px;
+    }
+    &__button {
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+    }
+    &__button img {
+        margin-right: 10px;
+    }
+    &__buttons {
+        display: flex;
+        gap: 20px;
+    }
+    &__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(30%);
+    }
+    &__bottom {
+        display: flex;
+        margin-top: 80px;
+        justify-content: space-between;
+        @media (max-width: $w1100) {
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (max-width: $w600) {
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

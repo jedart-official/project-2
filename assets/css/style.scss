@@ -1,0 +1,89 @@
+@import "vars.scss";
+@import "header.scss";
+@import "preview.scss";
+@import "learning.scss";
+@import "swiper.scss";
+@import "about.scss";
+@import "footer.scss";
+
+// HEADER
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    background-color: #020a18;
+    overflow-x: hidden;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+}
+
+.wrapper {
+    max-width: 1150px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @media (max-width: $w1100) {
+        padding: 0 70px;
+    }
+    @media (max-width: $w600) {
+        padding: 0 30px;
+    }
+}
+
+.btn {
+    background: #3a68b8;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: #264372;
+    }
+}
+
+.title {
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 130%;
+    color: #ffffff;
+}
+
+.descr {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.animation {
+    transition: all 0.8s ease;
+}
+
+.show {
+    top: 0;
+    position: fixed;
+}
+
+.lock {
+    overflow-y: hidden;
+}
