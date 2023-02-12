@@ -26,12 +26,22 @@
         <div class="header__mobile">
             <div class="header__content__mobile">
                 <nav class="header__navigation header__navigation__mobile">
-                    <ul class="header__menu">
-                        <li class="header__menu__item">Home</li>
-                        <li class="header__menu__item">About</li>
-                        <li class="header__menu__item">Services</li>
-                        <li class="header__menu__item">Blog</li>
-                        <li class="header__menu__item">Contact</li>
+                    <ul class="header__menu" id="header__menu__mobile">
+                        <li class="header__menu__item" data-scroll="home">
+                            Home
+                        </li>
+                        <li class="header__menu__item" data-scroll="about">
+                            About
+                        </li>
+                        <li class="header__menu__item" data-scroll="services">
+                            Services
+                        </li>
+                        <li class="header__menu__item" data-scroll="blog">
+                            Blog
+                        </li>
+                        <li class="header__menu__item" data-scroll="contact">
+                            Contact
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -44,12 +54,28 @@
                         <p>Artificial Intellegence</p>
                     </div>
                     <nav class="header__navigation">
-                        <ul class="header__menu">
-                            <li class="header__menu__item">Home</li>
-                            <li class="header__menu__item">About</li>
-                            <li class="header__menu__item">Services</li>
-                            <li class="header__menu__item">Blog</li>
-                            <li class="header__menu__item">Contact</li>
+                        <ul class="header__menu" id="header__menu">
+                            <li class="header__menu__item" data-scroll="home">
+                                Home
+                            </li>
+                            <li class="header__menu__item" data-scroll="about">
+                                About
+                            </li>
+                            <li
+                                class="header__menu__item"
+                                data-scroll="services"
+                            >
+                                Services
+                            </li>
+                            <li class="header__menu__item" data-scroll="blog">
+                                Blog
+                            </li>
+                            <li
+                                class="header__menu__item"
+                                data-scroll="contact"
+                            >
+                                Contact
+                            </li>
                         </ul>
                     </nav>
                     <a href="" class="btn header__btn"> Sign In </a>
@@ -61,7 +87,7 @@
                 </div>
             </div>
         </header>
-        <section class="artificial">
+        <section class="artificial" id="home">
             <div class="wrapper">
                 <div class="artificial__content">
                     <div class="artificial__top">
@@ -110,7 +136,7 @@
                 />
             </div>
         </section>
-        <section class="learning">
+        <section class="learning" id="about">
             <div class="wrapper">
                 <div class="learning__content">
                     <img
@@ -137,7 +163,7 @@
                 />
             </div>
         </section>
-        <section class="features">
+        <section class="features" id="services">
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide feature__item">
@@ -210,7 +236,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="blog">
             <div class="wrapper">
                 <div class="about__content">
                     <div class="about__left">
@@ -245,7 +271,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="wrapper">
                 <div class="footer__content">
                     <div class="footer__column footer__column-1">
@@ -328,4 +354,5 @@
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/anima.js"></script>
     <script src="assets/js/burger.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </html>
